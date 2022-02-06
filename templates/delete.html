@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<form action="/delete/{{id}}/" method="POST">
+    {% csrf_token %}
+    Are you sure?
+    <input type="submit" value="Yes" id="">
+    <a href="">Cancel</a>
+</form>
+
+{% endblock %}
